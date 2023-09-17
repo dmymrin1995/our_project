@@ -21,3 +21,4 @@ http.createServer(function(request, response){
 }).listen(3000, function() {
   console.log('Сервер запущен http://localhost:3000/index.html');
 });
+/* запустить сервер node server.js */
