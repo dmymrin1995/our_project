@@ -19,6 +19,6 @@ http.createServer(function(request, response){
         }
       });
 }).listen(3000, function() {
-  console.log('Сервер запущен http://localhost:3000/index.html');
+  console.log('Сервер запущен http://localhost:3000/project/index.html');
 });
-/* запустить сервер node server.js */
+/* запустить сервер node project/server.js */

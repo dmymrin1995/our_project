@@ -1,7 +1,7 @@
 let phrases = [
     'отправить другу смешную гифку',
     'посмотреть скидки на авиабилеты',
-    'разобраться, о чём поют рэперы',
+    'разобраться, о чём поют рэперы  1111111111111111111111111111111111',
     'Юрий Дудь',
     'расставить книги на полке по цвету',
     'читать про зарплаты в Сан-Франциско'
@@ -16,9 +16,11 @@ let phrases = [
   let phrase = document.querySelector('.phrase');
   let advice = document.querySelector('.advice');
   let image = document.querySelector('.image');
+  let textarea = document.querySelector('.textarea');
+  let textarea_result = document.querySelector('.textarea-result');
   
-  button.addEventListener('click', function () {
+  textarea.addEventListener('input', function () {
     let randomElement = getRandomElement(phrases);
-    phrase.textContent = randomElement;
+    textarea_result.textContent = randomElement;
   });
   

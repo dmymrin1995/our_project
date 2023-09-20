@@ -1,0 +1,115 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css2?family=Inter&display=swap");
+html {
+  font-size: 10px;
+  background-image: url("images/fon.svg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-color: #030227;
+  font-family: "Inter", sans-serif;
+  background-attachment: fixed;
+}
+
+.header {
+  background: rgba(3, 2, 39, 0.8);
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 108rem;
+  padding-top: 1rem;
+  padding-bottom: 1rem;
+  padding-left: 1.5rem;
+  padding-right: 1.5rem;
+  margin: 0 auto;
+  text-decoration: none;
+  color: #EF0195;
+  font-size: 16px;
+}
+
+.nav {
+  color: #EF0195;
+  display: flex;
+  align-items: center;
+  list-style: none;
+  padding-left: 0;
+  text-decoration: none;
+}
+.nav-item {
+  text-decoration: none;
+  color: #EF0195;
+  margin: 0 1.5rem;
+  font-weight: 700;
+}
+.nav-link {
+  text-decoration: none;
+  color: #EF0195;
+}
+.nav-link::after {
+  opacity: 1;
+}
+
+.body {
+  color: #FCDF87;
+  text-align: center;
+  font-size: 16px;
+  width: 100%;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  align-content: center;
+  justify-content: center;
+  overflow: auto;
+  flex-direction: column;
+}
+
+.textarea, .textarea-result {
+  border: 2px solid #0593FF;
+  border-radius: 10px;
+  text-align: left;
+  font-family: inherit;
+  font-size: inherit;
+  max-width: 50rem;
+  margin: 0 auto;
+  padding: 1rem;
+  display: block;
+  width: 100%;
+  overflow: hidden;
+  min-height: 2rem;
+  line-height: 2rem;
+  resize: none;
+}
+.textarea-result {
+  max-width: 30rem;
+}
+
+.textarea:empty::before, .textarea-result:empty::before {
+  content: "Введите текст";
+  color: #FCDF87;
+}
+
+.textarea-result:empty::before {
+  content: "Тут будет результат";
+  color: #FCDF87;
+}
+
+.textarea:focus, .textarea-result:focus {
+  content: "";
+  outline: none;
+}
+
+.footer {
+  background: rgba(3, 2, 39, 0.8);
+  color: #EF0195;
+  text-align: center;
+  padding-bottom: 2rem;
+  padding-top: 2rem;
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  font-size: 16px;
+}/*# sourceMappingURL=style.css.map */
