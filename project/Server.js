@@ -17,9 +17,9 @@ http.createServer(function(request, response){
         else{
             fs.createReadStream(filePath).pipe(response);
             response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});  
-            fs.readFile("./image.jpg", (err, image) => {
-              res.end(image);
-            });
+            // fs.readFile("./image.jpg", (err, image) => {
+            //   res.end(image);
+            // });
         }
       });
 }).listen(3000, function() {
