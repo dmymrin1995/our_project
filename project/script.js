@@ -1,3 +1,5 @@
+const parsedData = JSON.parse('{"prediction": 0.5759721994400024}');
+
 let phrases = [
     'отправить другу смешную гифку',
     'посмотреть скидки на авиабилеты',
@@ -21,6 +23,7 @@ let phrases = [
   
   textarea.addEventListener('input', function () {
     let randomElement = getRandomElement(phrases);
-    textarea_result.textContent = randomElement;
+   // textarea_result.textContent = randomElement;
+    textarea_result.textContent= parsedData.prediction;
   });
   

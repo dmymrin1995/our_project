@@ -140,7 +140,9 @@ html {
       <div class="footer-item">Копирайт   </div>
     </div>
   </footer>
-  <script>let phrases = [
+  <script>const parsedData = JSON.parse('{"prediction": 0.5759721994400024}');
+
+let phrases = [
     'отправить другу смешную гифку',
     'посмотреть скидки на авиабилеты',
     'разобраться, о чём поют рэперы  1111111111111111111111111111111111',
@@ -163,7 +165,8 @@ html {
   
   textarea.addEventListener('input', function () {
     let randomElement = getRandomElement(phrases);
-    textarea_result.textContent = randomElement;
+   // textarea_result.textContent = randomElement;
+    textarea_result.textContent= parsedData.prediction;
   });
   
   </script>

@@ -3,7 +3,7 @@ const fs = require("fs");
 const hostname = '127.0.0.1'; 
 const port = 3000;
 http.createServer(function(request, response){
-      
+    
     console.log(`Запрошенный адрес: ${request.url}`);
     // получаем путь после слеша
     const filePath = request.url.substr(1);
@@ -16,6 +16,10 @@ http.createServer(function(request, response){
         }
         else{
             fs.createReadStream(filePath).pipe(response);
+            response.writeHead(200, {'Content-Type': 'text/html; charset=utf-8'});  
+            fs.readFile("./image.jpg", (err, image) => {
+              res.end(image);
+            });
         }
       });
 }).listen(3000, function() {
