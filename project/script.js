@@ -1,5 +1,5 @@
 const parsedData = JSON.parse('{"prediction": 0.5759721994400024}');
-
+var url = 'http://127.0.0.1:5000/api/sreview_predict'; //адрес сервака
 let phrases = [
     'отправить другу смешную гифку',
     'посмотреть скидки на авиабилеты',
@@ -22,8 +22,11 @@ let phrases = [
   let textarea_result = document.querySelector('.textarea-result');
   
   textarea.addEventListener('input', function () {
+    window.setTimeout ('',500)
     let randomElement = getRandomElement(phrases);
    // textarea_result.textContent = randomElement;
-    textarea_result.textContent= parsedData.prediction;
+   request.post(url, JSON.stringify(textarea.textContent)); //это отправка на сервак
+   console.log(JSON.stringify(textarea.textContent)); 
+    textarea_result.textContent = textarea.textContent;
   });
   
