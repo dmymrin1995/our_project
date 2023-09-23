@@ -1,5 +1,6 @@
 const parsedData = JSON.parse('{"prediction": 0.5759721994400024}');
 var url = 'http://127.0.0.1:5000/api/sreview_predict'; //адрес сервака
+var request = require('request')
 let phrases = [
     'отправить другу смешную гифку',
     'посмотреть скидки на авиабилеты',
